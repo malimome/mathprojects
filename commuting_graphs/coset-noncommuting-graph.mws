@@ -1,0 +1,94 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" -1 -1 "
+Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(group):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(networks):" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 30 "group and network initialised;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 14 "p1:=\{[[1,2]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "p2:=\{[[1,2]],[[3,4]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "p3:=\{[[1,2,3]],[[2,3]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 26 "p4:=\{[[1,2,3,4]],[[2,4]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 34 "p5:=\{[[1,2,3,4,5]],[[2,5],[3,4]]\}:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 36 "p6:=\{[[1,2,3,4,5,6]],[[2,6],[3,5]]\}:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 44 "p7:=\{[[1,2,3,4,5,6,7]],[[2,7],[3,6],[4,5
+]]\}:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "p8:=\{[[1,2,3,4,5,6,7,8]],
+[[2,8],[3,7],[4,6]]\}:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "p9:=\{[[1
+,2,3,4,5,6,7,8,9]],[[2,9],[3,8],[4,7],[5,6]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 59 "p10:=\{[[1,2,3,4,5,6,7,8,9,10]],[[2,10],[3,9],[4,8],[
+5,7]]\}:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "grplist:=(p1,p2,p3,p4,p
+5,p6,p7,p8,p9,p10):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "group list
+;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "i:=6:" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT -1 5 "index" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "dn :=permgroup(i*2,grplist[i]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+16 "z := center(dn):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "celem := co
+sets(dn,z) minus \{[]\}:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "for j i
+n celem do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "  cl:=[]:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 25 "  for t in elements(z) do" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 31 "    cl:=[op(cl),mulperms(j,t)]:" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 5 "  od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "  print
+ (cl):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "zelem := elements(z):" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#7$7#7(\"\"\"\"\"#\"\"$\"\"%\"\"&\"\"'7$7%F&F*F(7%F'F+F)" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7$7$7$\"\"#\"\"'7$\"\"$\"\"&7%7$\"\"\"
+\"\"%7$F&F)7$F*F'" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7$7$7%\"\"\"\"\"$
+\"\"&7%\"\"#\"\"%\"\"'7#7(F&F,F(F+F'F*" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6#7$7%7$\"\"\"\"\"#7$\"\"$\"\"'7$\"\"%\"\"&7$7$F&F-7$F'F," }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#7$7$7$\"\"\"\"\"$7$\"\"%\"\"'7%7$F&F*7
+$\"\"#\"\"&7$F'F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "new(g1)
+:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 10 "new graph;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 19 "for v in (celem) do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 " addvertex(\{v\},g1);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 25 " for t in vertices(g1) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+54 "  if v<>t and evalb(mulperms(v,t)<>mulperms(t,v)) then" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 23 "   connect(\{v\},\{t\},g1);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 5 "  fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 " od:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 11 "graph made;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "
+draw(g1);" }}{PARA 13 "" 1 "" {GLPLOT2D 436 390 390 {PLOTDATA 2 "66-%'
+CURVESG6$7$7$$\"+Q*p,4$!#5$\"+l^c5&*F*7$$!+]*p,4)F*$\"+9D&y(eF*-%'COLO
+URG6&%$RGBG\"\"!$\"#5!\"\"F6-%'POINTSG6#7$$\"\"\"F6$F6F6-%%TEXTG6$7$$
+\"+l*p,4&F*$!+c^c5&*F*Q1[[1,~3],~[4,~6]]6\"-F$6$7$F'7$$\"+l*p,4$F*FGF2
+-F;6#F'-FB6$7$$\"+Q*p,4&F*F+Q1[[2,~6],~[3,~5]]FJ-F$6$7$F=F'F2-FB6$7$$
+\"#7F9F@Q5[[1,~2,~3,~4,~5,~6]]FJ-F;6#F--FB6$7$$!+&*p,45!\"*F0Q7[[1,~3,
+~5],~[2,~4,~6]]FJ-F;6#7$$!+M*p,4)F*$!+PD&y(eF*-FB6$7$$!+$*p,45FcoFjoQ9
+[[1,~2],~[3,~6],~[4,~5]]FJ-F;6#FN-F$6$7$F'FgoF2-F$6$7$F=FgoF2-F$6$7$F-
+FgoF2-F$6$7$F=FNF2-F$6$7$F-FNF2-F$6$7$FgoFNF2-%*AXESSTYLEG6#%%NONEG" 
+1 2 0 1 10 0 2 9 1 1 2 1.000000 45.000000 45.000000 0 0 "Curve 1" "Cur
+ve 2" "Curve 3" "Curve 4" "Curve 5" "Curve 6" "Curve 7" "Curve 8" "Cur
+ve 9" "Curve 10" "Curve 11" "Curve 12" "Curve 13" "Curve 14" "Curve 15
+" "Curve 16" "Curve 17" "Curve 18" "Curve 19" }}}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 14 "degreeseq(g1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#7'\"\"$F$\"\"%F%F%" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "cad
+jacency(g1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'RTABLEG6%\"')o-)-%'
+MATRIXG6#7(7(\"\"!\"\"\"F,F-F-F-7(F-F,F-F-F-F,F+7(F-F-F-F,F,F-F/F.%'Ma
+trixG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "charpoly(g1,x);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*$)%\"xG\"\"'\"\"\"F(*&\"#7F()F&\"
+\"%F(!\"\"*&\"#;F()F&\"\"$F(F-" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 13 "diameter(g1);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#\"\"#" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "incidence(g1);" }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6#-%'RTABLEG6+\"(;v-\"%)anythingG%'MatrixG%'sparse
+G%.Fortran_orderG7\"\"\"#;\"\"\"\"\"';F.\"#7" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 1 "\004" }}}}{MARK "9 0 0" 1 }{VIEWOPTS 1 1 0 1 1 
+1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }{RTABLE_HANDLES 802688 
+1027516 }{RTABLE 
+M7R0
+I3RTABLE_SAVE/802688X.%)anythingG6"6"[gl!"!!!!#!"'"'!!E\[l96$""$""#"""6$""'F)F+
+6$F*""&F+6$F+F-F+6$""%F-F+6$F)F-F+6$F+F2F+6$F)F2F+6$F/F-F+6$F2F*F+6$F2F+F+6$F/F
+*F+6$F/F+F+6$F-F2F+6$F*F+F+6$F)F/F+6$F/F)F+6$F-F+F+6$F+F/F+6$F2F)F+6$F-F/F+6$F+
+F*F+6$F*F)F+6$F*F2F+6"
+}
+{RTABLE 
+M7R0
+I4RTABLE_SAVE/1027516X.%)anythingG6"6"[gl!"!!!!#!"'"-!!E\[l96$""$""#"""6$F*"#5F
++6$""'F)F+6$F*""&F+6$""%"")F+6$F1""*F+6$F+F/F+6$F3F/F+6$F)"#6F+6$F/"#7F+6$F1F-F
++6$F3""(F+6$F+F<F+6$F1F:F+6$F+F6F+6$F*F?F+6$F/F3F+6$F*F+F+6$F1F3F+6$F)F1F+6$F/F
+*F+6$F3F)F+6$F)F4F+6$F+F+F+6"
+}
+

@@ -1,0 +1,99 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Output" -1 
+11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 3 0 
+0 0 0 1 0 1 0 2 2 0 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" -1 -1 "
+Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 1 1 1 }3 1 0 0 0 0 1 0 1 0 2 2 0 1 }
+}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(group):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "with(networks):" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT -1 30 "group and network initialised;" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 14 "p1:=\{[[1,2]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "p2:=\{[[1,2]],[[3,4]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "p3:=\{[[1,2,3]],[[2,3]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 26 "p4:=\{[[1,2,3,4]],[[2,4]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 34 "p5:=\{[[1,2,3,4,5]],[[2,5],[3,4]]\}:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 36 "p6:=\{[[1,2,3,4,5,6]],[[2,6],[3,5]]\}:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 44 "p7:=\{[[1,2,3,4,5,6,7]],[[2,7],[3,6],[4,5
+]]\}:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "p8:=\{[[1,2,3,4,5,6,7,8]],
+[[2,8],[3,7],[4,6]]\}:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "p9:=\{[[1
+,2,3,4,5,6,7,8,9]],[[2,9],[3,8],[4,7],[5,6]]\}:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 59 "p10:=\{[[1,2,3,4,5,6,7,8,9,10]],[[2,10],[3,9],[4,8],[
+5,7]]\}:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "grplist:=(p1,p2,p3,p4,p
+5,p6,p7,p8,p9,p10):" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 11 "group list
+;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "i:=9:" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 31 "dn :=permgroup(i*2,grplist[i]):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 37 "z := center(dn):zelem := elements(z):" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "new(g):" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 24 "for v in elements(dn) do" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 31 "  if (not member(v,zelem)) then" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 21 "    addvertex(\{v\},g):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "    for t in vertices(g) do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 50 "      if v<>t and member(mulperms(v,t),zelem) then" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "        connect(\{v\},\{t\},g):" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "      fi;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "    od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "  fi;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT -1 10 "graph made" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "d
+raw(g);" }{TEXT -1 0 "" }}{PARA 13 "" 1 "" {GLPLOT2D 531 444 444 
+{PLOTDATA 2 "6I-%%TEXTG6$7$$!+1*Hmt%!#5$!+IkD='*F)Q>[[1,~8,~6,~4,~2,~9
+,~7,~5,~3]]6\"-%'POINTSG6#7$$\"+:f$oA*!#6$!+j<Md**F)-F$6$7$$\"+#f$oAHF
+)F5QA[[1,~9],~[2,~8],~[3,~7],~[4,~6]]F--F/6#7$$\"+dNQdWF)$!+9Hj^*)F)-F
+$6$7$$\"+dNQdkF)FBQA[[1,~7],~[2,~6],~[3,~5],~[8,~9]]F--F/6#7$$\"+u\"*3
+!R(F)$!+Nk&pt'F)-F/6#7$$!+&*)Hmt#F)$\"+LkD='*F)-F$6$7$$!+&*)Hmt%F)FVQA
+[[1,~3],~[4,~9],~[5,~8],~[6,~7]]F--F/6#7$$!+hjMEgF)$\"+vA<!)zF)-F$6$7$
+$!+hjME!)F)F]oQA[[1,~8],~[2,~7],~[3,~6],~[4,~5]]F--F/6#7$$!+d8<-&)F)$
+\"+H;Kk_F)-F$6$7$$!+Or@]5!\"*FjoQB[[1,~4,~7],~[2,~5,~8],~[3,~6,~9]]F--
+F/6#7$$!+(*4tH)*F)$\"+w^\\P=F)-F$6$7$$!++J(H=\"FapFhpQA[[1,~5],~[2,~4]
+,~[6,~9],~[7,~8]]F--%'CURVESG6$7$7$$\"+%HAZK*F)$\"+imT7OF)7$$!+1*Hmt#F
+)F*-%'COLOURG6&%$RGBG\"\"!$\"#5!\"\"F`r-F$6$7$$\"+u\"*3!R*F)FOQ>[[1,~9
+,~8,~7,~6,~5,~4,~3,~2]]F--F/6#7$$\"+#HAZK*F)$!+mmT7OF)-F/6#Fiq-F/6#7$$
+!+)*4tH)*F)$!+u^\\P=F)-F$6$7$F]qFhsQA[[1,~2],~[3,~9],~[4,~8],~[5,~7]]F
+--F$6$7$$\"+HAZK6FapF_sQ>[[1,~5,~9,~4,~8,~3,~7,~2,~6]]F--F/6#7$$\"\"\"
+F`r$F`rF`r-F/6#7$$!+e8<-&)F)$!+F;Kk_F)-F$6$7$F_pF_uQA[[1,~4],~[2,~3],~
+[5,~9],~[6,~8]]F--F$6$7$$\"+s\"*3!R*F)$\"+Ok&pt'F)QB[[1,~7,~4],~[2,~8,
+~5],~[3,~9,~6]]F--F/6#7$$\"+fNQdWF)$\"+8Hj^*)F)-F$6$7$$\"+fNQdkF)FbvQ>
+[[1,~2,~3,~4,~5,~6,~7,~8,~9]]F--Faq6$7$F_vFLF\\r-F/6#7$$!+jjMEgF)$!+uA
+<!)zF)-F$6$7$$!+jjME!)F)FbwQ>[[1,~6,~2,~7,~3,~8,~4,~9,~5]]F--F$6$7$$\"
++$f$oAHF)$\"+j<Md**F)QA[[2,~9],~[3,~8],~[4,~7],~[5,~6]]F--F/6#7$$\"+Lf
+$oA*F4F_x-Faq6$7$7$$\"+s\"*3!R(F)FjuFgoF\\r-F$6$7$FatFgqQ>[[1,~3,~5,~7
+,~9,~2,~4,~6,~8]]F--F/6#Fjx-F$6$7$$\"#7FcrFitQA[[1,~6],~[2,~5],~[3,~4]
+,~[7,~9]]F--F/6#Fdq-Faq6$7$F_wF\\sF\\r-%*AXESSTYLEG6#%%NONEG" 1 2 0 1 
+10 0 2 9 1 1 2 1.000000 45.000000 45.000000 0 0 "Curve 1" "Curve 2" "C
+urve 3" "Curve 4" "Curve 5" "Curve 6" "Curve 7" "Curve 8" "Curve 9" "C
+urve 10" "Curve 11" "Curve 12" "Curve 13" "Curve 14" "Curve 15" "Curve
+ 16" "Curve 17" "Curve 18" "Curve 19" "Curve 20" "Curve 21" "Curve 22
+" "Curve 23" "Curve 24" "Curve 25" "Curve 26" "Curve 27" "Curve 28" "C
+urve 29" "Curve 30" "Curve 31" "Curve 32" "Curve 33" "Curve 34" "Curve
+ 35" "Curve 36" "Curve 37" "Curve 38" }}}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "degreeseq(g);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#73\"
+\"!F$F$F$F$F$F$F$F$\"\"\"F%F%F%F%F%F%F%" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "adjacency(g);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'R
+TABLEG6%\")/SA?-%'MATRIXG6#7(7(\"\"!\"\"\"F-F,F-F-7(F-F,F,F-F-F-F.F+7(
+F-F-F-F-F,F,F/%'MatrixG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "
+charpoly(g,x);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#,(*$)%\"xG\"\"'\"\"
+\"F(*&\"#7F()F&\"\"%F(!\"\"*&\"#;F()F&\"\"$F(F-" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 12 "diameter(g);" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#\"\"#" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "incidence(g);" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'RTABLEG6+\"(%)o4\"%)anythingG%'Mat
+rixG%'sparseG%.Fortran_orderG7\"\"\"#;\"\"\"\"\"';F.\"#7" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "\004" }}}}{MARK "7 6 0" 9 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
+{RTABLE_HANDLES 20224004 1096884 }{RTABLE 
+M7R0
+I5RTABLE_SAVE/20224004X.%)anythingG6"6"[gl!"!!!!#!"'"'!!E\[l96$""%""#"""6$""&F*
+F+6$""$F+F+6$F/F-F+6$""'F*F+6$F-F/F+6$F*F2F+6$F*F)F+6$F/F2F+6$F)F/F+6$F+F-F+6$F
+-F)F+6$F)F-F+6$F2F)F+6$F2F/F+6$F+F2F+6$F*F+F+6$F2F+F+6$F-F+F+6$F*F-F+6$F+F/F+6$
+F+F*F+6$F)F2F+6$F/F)F+6"
+}
+{RTABLE 
+M7R0
+I4RTABLE_SAVE/1096884X.%)anythingG6"6"[gl!"!!!!#!"'"-!!E\[l96$""%"#6"""6$""$F-F
++6$""&F*F+6$F-F/F+6$""'""#F+6$F3F2F+6$F3F3F+6$F3""*F+6$F+"")F+6$F+F/F+6$F-"#5F+
+6$F+F+F+6$F2F)F+6$F2F-F+6$F/F<F+6$F2"#7F+6$F-""(F+6$F3F+F+6$F/F9F+6$F/F7F+6$F)F
+DF+6$F+FBF+6$F)F)F+6$F)F2F+6"
+}
+
